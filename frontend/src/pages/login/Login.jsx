@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 // UI FOR LOGIN PAGE
 
@@ -30,7 +31,7 @@ const Login = () => {
                 <div>
                     <button className='btn btn-block btn-sm bg-pink-500 text-white border-none hover:bg-pink-700  mt-4 '>Login</button>
                 </div>
-                <a href="#" className="text-sm hover:underline text-pink-100 hover:text-pink-600 mt-2 inline-block">{"Don't"} have an account?</a>
+                <Link to='/signup' className="text-sm hover:underline text-pink-100 hover:text-pink-600 mt-2 inline-block">{"Don't"} have an account?</Link>
             </form>
                 
             </div>

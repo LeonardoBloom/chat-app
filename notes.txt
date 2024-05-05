@@ -1,2 +1,11 @@
-token generation for login authentication
-message routing with POSTMAN API
+- Setup authentication routes with Express js
+- Used POSTMAN for api requests
+- MongoDB database
+- token generation with JWTWebToken
+- bcrypt for password hashing into database
+
+- message model
+- protected route middleware
+
+- tailwind css UI
+TODO: logout
