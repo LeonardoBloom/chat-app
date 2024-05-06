@@ -9,3 +9,16 @@
 
 - tailwind css UI
 TODO: logout
+
+
+
+
+from video:
+- tech stack: MERN + socket.io + tailwindcss + daisyUI
+- authentication & authorization with JWT
+- real-time messaging with socket.io
+- online user status (socket.io and react context)
+- global state management with zustand
+- error handling both on the server and on the client
+- deployment
+
