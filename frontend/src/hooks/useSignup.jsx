@@ -11,11 +11,10 @@ const useSignup = () => {
     const signup = async ({fullName, username, password, confirmPassword, gender}) => {
         const success = handleInputErrors({fullName, username, password, confirmPassword, gender})
 
-
         if (!success) return;
         setloading(true)
-        try {
 
+        try {
             const res = await fetch("/api/auth/signup", {
                 method: 'POST',
                 headers: { "Content-Type": "application/json"},

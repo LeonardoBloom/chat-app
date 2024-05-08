@@ -25,7 +25,7 @@ const MessageContainer = ({username}) => {
                 {/* HEADER */}
                 <div className='bg-pink-500 px-4 py-2 mb-2'>
                     <span className='label-text text-pink-100'>To: </span>
-                    <span className='text-pink-50 font-bold'>{selectedConversation.username}</span>
+                    <span className='text-pink-50 font-bold'>{selectedConversation.username} <span className='text-pink-300'>({selectedConversation.fullName})</span></span>
                 </div>
 
                 <Messages />
