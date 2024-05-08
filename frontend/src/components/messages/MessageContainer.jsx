@@ -2,20 +2,30 @@ import React from 'react'
 import MessageInput from './MessageInput'
 import Messages from './Messages'
 import { TiMessages } from 'react-icons/ti'
+import useConversation from '../../zustand/useConversation'
+import { useEffect } from 'react'
 
-const MessageContainer = () => {
+const MessageContainer = ({username}) => {
 
-    const noChatSelected = true;
+    const {selectedConversation, setSelectedConversation} = useConversation()
+
+    useEffect(() => {
+        // cleanup
+        return () => setSelectedConversation(null)
+    },[setSelectedConversation])
 
     return (
-        <div className='md: min-w-[450px] flex flex-col'>
-        {noChatSelected ? (
-            <NoChatSelected /> 
+        <div className='md: min-w-[500px] flex flex-col'>
+        {!selectedConversation ? (
+            <NoChatSelected 
+                username={username}
+            /> 
         ) : (
             <>
                 {/* HEADER */}
-                <div className='bg-slate-500 px-4 py-2 mb-2'>
-                    <span className='label-text'>To: </span><span className='text-gray-900 font-bold'>Destination Name</span>
+                <div className='bg-pink-500 px-4 py-2 mb-2'>
+                    <span className='label-text text-pink-100'>To: </span>
+                    <span className='text-pink-50 font-bold'>{selectedConversation.username}</span>
                 </div>
 
                 <Messages />
@@ -29,12 +39,12 @@ const MessageContainer = () => {
 
 export default MessageContainer
 
-const NoChatSelected = () => {
+const NoChatSelected = ({username}) => {
     return (
         <div className='flex items-center justify-center w-full h-full'>
             <div className='px-4 text-center sm:text-lg md:text-xl text-gray-200 font-semibold flex flex-col
             items-center gap-2'>
-                <p> Welcome 😼 {'Anon-chan'} *uwu*</p>
+                <p> Welcome <span className='text-pink-400' >{username}</span> 😼 *uwu*</p>
                 <p> Select a NyanChat to start messaging</p>
                 <TiMessages className='text-3xl md:text-6xl text-center' />
             </div>

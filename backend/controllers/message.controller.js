@@ -55,7 +55,7 @@ export const getMessages = async (req, res) => {
         }).populate("messages");
 
         if(!conversation) {
-            return res.status(200).json({error: "Cannot find conversation"})
+            return res.status(200).json([])
         }
 
         const messages = await conversation.messages

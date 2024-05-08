@@ -92,7 +92,11 @@ const SignUp = () => {
 
 
           <div>
-            <button className='btn btn-block btn-sm bg-pink-500 text-white border-none hover:bg-pink-700  mt-4 '>Sign Up</button>
+            <button 
+            className='btn btn-block btn-sm bg-pink-500 text-white border-none hover:bg-pink-700  mt-4'
+            disabled={loading}>
+              {loading ? <span className='loading loading-spinner'></span> : "Sign Up"}
+            </button>
           </div>
 
           <Link to='/login' className="text-sm hover:underline text-pink-100 hover:text-pink-600 mt-2 inline-block">

@@ -8,7 +8,13 @@
 - protected route middleware
 
 - tailwind css UI
-TODO: logout
+- toast.error for error handling ui
+- zustand
+
+
+TODO: 
+- add date on top of chat day 
+- Search algorithm that filters on each keystroke
 
 
 
