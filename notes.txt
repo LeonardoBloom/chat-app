@@ -15,6 +15,7 @@
 TODO: 
 - add date on top of chat day 
 - Search algorithm that filters on each keystroke
+- FIX SHOULDSHAKE
 
 
 
