@@ -2,8 +2,6 @@
 
 **Real-time full-stack chat application** built with the MERN stack and Socket.IO, designed for seamless messaging, secure authentication, and responsive cross-device use.
 
-![screenshot](./screenshot.png) <!-- Optional: Replace with actual screenshot path -->
-
 ---
 
 ## ✨ Features
